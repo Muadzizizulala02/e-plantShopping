@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#e6f2ea"/>
+  <path d="M200 150 L200 230" stroke="#2f5e3a" stroke-width="6"/>
+  <path transform="translate(200 90) rotate(-35)" d="M0 0 Q 18 -40 0 -90 Q -18 -40 0 0Z" fill="#4f8a5b" stroke="#2f5e3a" stroke-width="2"/><path transform="translate(180 110) rotate(-55)" d="M0 0 Q 18 -40 0 -90 Q -18 -40 0 0Z" fill="#4f8a5b" stroke="#2f5e3a" stroke-width="2"/><path transform="translate(220 110) rotate(35)" d="M0 0 Q 18 -40 0 -90 Q -18 -40 0 0Z" fill="#4f8a5b" stroke="#2f5e3a" stroke-width="2"/><path transform="translate(200 70) rotate(0)" d="M0 0 Q 18 -40 0 -90 Q -18 -40 0 0Z" fill="#4f8a5b" stroke="#2f5e3a" stroke-width="2"/><path transform="translate(170 130) rotate(-70)" d="M0 0 Q 18 -40 0 -90 Q -18 -40 0 0Z" fill="#4f8a5b" stroke="#2f5e3a" stroke-width="2"/><path transform="translate(230 130) rotate(70)" d="M0 0 Q 18 -40 0 -90 Q -18 -40 0 0Z" fill="#4f8a5b" stroke="#2f5e3a" stroke-width="2"/>
+  
+  <path d="M140 225 L260 225 L245 290 L155 290 Z" fill="#c0643c"/>
+  <rect x="132" y="210" width="136" height="22" rx="6" fill="#a8532e"/>
+</svg>

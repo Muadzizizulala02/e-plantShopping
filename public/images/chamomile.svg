@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#fdf6e3"/>
+  <path d="M200 150 L200 230" stroke="#4f8a46" stroke-width="6"/>
+  <g transform="translate(200 110) rotate(0)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(45)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(90)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(135)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(180)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(225)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(270)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g><g transform="translate(200 110) rotate(315)"><ellipse cx="0" cy="-40" rx="16" ry="30" fill="#8bc683"/></g>
+  <circle cx="200" cy="110" r="22" fill="#f6d55c"/>
+  <path d="M140 225 L260 225 L245 290 L155 290 Z" fill="#c0643c"/>
+  <rect x="132" y="210" width="136" height="22" rx="6" fill="#a8532e"/>
+</svg>
