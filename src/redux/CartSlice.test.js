@@ -1,11 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import cartReducer, {
   addItem,
-  decreaseQuantity,
-  increaseQuantity,
   removeItem,
   selectCartCount,
   selectCartTotal,
+  updateQuantity,
 } from './CartSlice.jsx'
 
 const lavender = { id: 'lavender', name: 'Lavender', image: './images/lavender.svg', cost: 10 }
@@ -15,13 +14,13 @@ const wrap = (cart) => ({ cart })
 const emptyState = cartReducer(undefined, { type: '@@init' })
 
 describe('cartSlice', () => {
-  it('adds a new plant with quantity 1', () => {
+  it('addItem adds a new plant with quantity 1', () => {
     const state = cartReducer(emptyState, addItem(lavender))
 
     expect(state.items).toEqual([{ ...lavender, quantity: 1 }])
   })
 
-  it('increments quantity when adding a plant already in the cart', () => {
+  it('addItem increments quantity when the plant is already in the cart', () => {
     const once = cartReducer(emptyState, addItem(lavender))
     const twice = cartReducer(once, addItem(lavender))
 
@@ -29,29 +28,26 @@ describe('cartSlice', () => {
     expect(twice.items[0].quantity).toBe(2)
   })
 
-  it('increases and decreases quantity, never going below 1', () => {
+  it('updateQuantity sets the quantity of a plant', () => {
     let state = cartReducer(emptyState, addItem(lavender))
-    state = cartReducer(state, increaseQuantity('lavender'))
-    expect(state.items[0].quantity).toBe(2)
+    state = cartReducer(state, updateQuantity({ id: 'lavender', quantity: 4 }))
 
-    state = cartReducer(state, decreaseQuantity('lavender'))
-    state = cartReducer(state, decreaseQuantity('lavender'))
-    expect(state.items[0].quantity).toBe(1)
+    expect(state.items[0].quantity).toBe(4)
   })
 
-  it('removes a plant type entirely', () => {
+  it('updateQuantity ignores values below 1 and unknown ids', () => {
+    const state = cartReducer(emptyState, addItem(lavender))
+
+    expect(cartReducer(state, updateQuantity({ id: 'lavender', quantity: 0 }))).toEqual(state)
+    expect(cartReducer(state, updateQuantity({ id: 'missing', quantity: 3 }))).toEqual(state)
+  })
+
+  it('removeItem removes a plant type entirely', () => {
     let state = cartReducer(emptyState, addItem(lavender))
     state = cartReducer(state, addItem(basil))
     state = cartReducer(state, removeItem('lavender'))
 
     expect(state.items.map((item) => item.id)).toEqual(['basil'])
-  })
-
-  it('ignores quantity changes for unknown ids', () => {
-    const state = cartReducer(emptyState, addItem(lavender))
-
-    expect(cartReducer(state, increaseQuantity('missing'))).toEqual(state)
-    expect(cartReducer(state, decreaseQuantity('missing'))).toEqual(state)
   })
 
   it('computes total count and total cost across all items', () => {

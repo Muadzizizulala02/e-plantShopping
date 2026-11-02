@@ -5,7 +5,7 @@ Built with React, Redux Toolkit and React Router.
 
 ## Features
 
-- **Landing page** with a button linking to the product listing.
+- **Landing page** with the company name and a "Get Started" button linking to the product listing.
 - **Navigation bar** linking to Home, Plants, About Us and the Cart. The cart icon shows the total number of items.
 - **Product listing** grouped into sections (*Aromatic Plants* and *Medicinal Plants*). Each plant card shows the image, name, description, cost and an *Add to Cart* button.
 - **Shopping cart** with one card per plant type showing the thumbnail, unit cost, line subtotal, quantity controls (+ / −) and a *Delete* button. The page shows the cart total and has *Continue Shopping* and *Checkout* buttons.
@@ -15,23 +15,21 @@ Built with React, Redux Toolkit and React Router.
 
 ```
 src/
-  App.jsx                  Routes and layout
-  App.css                  Styles
+  App.jsx                  Routes and landing page
+  App.css                  Styles (including the landing page background)
   main.jsx                 Redux Provider and router setup
   components/
     AboutUs.jsx            About page
-    Cart.jsx               Cart page (totals, continue shopping, checkout)
-    CartItem.jsx           One cart card per plant type
-    LandingPage.jsx        Landing page
+    CartItem.jsx           Shopping cart page with one card per plant type
     NavBar.jsx             Navigation bar with cart badge
     ProductList.jsx        Plant sections and plant cards
   data/plants.js           Plant catalogue
   redux/
-    CartSlice.jsx          Cart state, reducers and selectors
+    CartSlice.jsx          Cart state: addItem, removeItem, updateQuantity
     CartSlice.test.js      Reducer and selector tests
     store.js               Redux store
   utils/formatPrice.js     Currency formatting
-public/images/             Plant thumbnails (SVG)
+public/images//             Plant thumbnails (SVG)
 ```
 
 ## Getting started
