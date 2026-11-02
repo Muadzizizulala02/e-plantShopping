@@ -50,5 +50,5 @@ npm run preview   # preview the production build
 The app uses `HashRouter` and a relative Vite `base`, so it works on static hosts such as GitHub Pages
 without extra server rewrite rules.
 
-Live URL: _add the deployed URL here once published_
+Live URL: https://muadzizizulala02.github.io/e-plantShopping/
 
