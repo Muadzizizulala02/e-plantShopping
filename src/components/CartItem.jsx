@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import NavBar from './NavBar.jsx'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   removeItem,
@@ -49,7 +50,7 @@ function CartItem({ item }) {
   )
 }
 
-function ShoppingCart() {
+function CartContent() {
   const items = useSelector(selectCartItems)
   const total = useSelector(selectCartTotal)
 
@@ -87,6 +88,17 @@ function ShoppingCart() {
         </div>
       </div>
     </section>
+  )
+}
+
+function ShoppingCart() {
+  return (
+    <>
+      <NavBar />
+      <main>
+        <CartContent />
+      </main>
+    </>
   )
 }
 

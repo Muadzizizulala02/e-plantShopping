@@ -71,6 +71,13 @@ button,
   background: var(--green-light);
 }
 
+.btn-added {
+  background: var(--green-light);
+  color: var(--green-dark);
+  border-color: var(--green);
+  cursor: default;
+}
+
 .btn-danger {
   background: transparent;
   color: var(--danger);
